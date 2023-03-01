@@ -1,9 +1,11 @@
-<p class="container-fluid">
-    <ul>
-        <% @articles.each do |article| %>
-        <li>
-        <%= article.title %>
-        </li>
-        <% end %>
-    </ul>
-</p>
+<h1>The Rails Doctrine News</h1>
+—
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+—
+<%= link_to "New Article", new_article_path %>
